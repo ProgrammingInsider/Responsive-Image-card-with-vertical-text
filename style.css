@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,400;8..144,500;8..144,600;8..144,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+:root{
+    --bodyBg:#343F4B;
+    --darkgrey:#7c7a79;
+    --primaryColor:#0076A3;
+    --textColor:#fff;
+}
+
+body{
+    font-family: 'Roboto Serif', serif;
+    background-color: var(--bodyBg);
+    color: var(--textColor);
+    padding: 2em;
+}
+
+/* Section Desc */
+
+section{
+    width: 90%;
+    max-width: 1400px;
+    margin: auto;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.sectionHeader{
+    color: var(--primaryColor);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: .5em;
+}
+
+.heading{
+    font-size: 2rem;
+    margin-bottom: .5em;
+}
+
+.para{
+    max-width: 500px;
+    font-size: 1rem;
+    color: var(--darkgrey);
+    margin: auto; 
+}
+
+/* Card Container */
+
+.card-container{
+    display: grid;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 2em;
+}
+
+/* Card */
+
+.card{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Username */
+
+.title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 100%;
+    margin-right: 1em;
+}
+
+.name{
+    font-weight: bold;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+}
+
+.position{
+    color: var(--darkgrey);
+    font-weight: lighter;
+    margin-left: .5em;
+}
+
+/* Img Container */
+
+.img-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.img-container img{
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+    border-radius: 10px;
+}
+.socialLinks{
+    text-align: left;
+    margin-top: .5em;
+}
+
+.socialLinks i{
+    color: var(--darkgrey);
+    margin-right: .3em;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+@media screen and (min-width:750px) {
+    .card{
+        max-height: 300px;
+    }
+    .card-container{
+       grid-template-columns: 1fr 1fr;
+    }   
+}
+
+@media screen and (min-width:1000px) {
+    .card-container{
+       grid-template-columns: 1fr 1fr 1fr 1fr;
+    }   
+}
